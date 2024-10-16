@@ -10,6 +10,49 @@ const minCharacter = "abcdefghijklmnñopqrstuvwxyz";
 const mayusCharacter = minCharacter.toUpperCase();
 const simbols = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
+// FUNCIÓN PARA OBTENER CONFIGURACIÓN DE EMAILJS
+const getConfigEmailJs = async () => {
+  try {
+    const query = await fetch(
+      "https://server-portfolio-arrb.onrender.com/api/config"
+    );
+    if (!query.ok) {
+      throw new Error(`Error ${query.status}: ${query.statusText}`);
+    }
+    const result = await query.json();
+    return result;
+  } catch (err) {
+    console.log(err.message);
+    return null;
+  }
+};
+
+// FUNCIÓN PARA INICIALIZAR EMAILJS
+const initServiceEmailJs = async () => {
+  const configEmailJs = await getConfigEmailJs();
+  if (configEmailJs) {
+    const { USER_ID } = configEmailJs;
+    emailjs.init(USER_ID); // User ID de EmailJS
+    return configEmailJs;
+  } else {
+    showModalsMessageAlert(8);
+    return null;
+  }
+};
+
+// FUNCIÓN PARA ENVIAR EMAIL USANDO Emailjs
+const postEmail = async (form, configEmailJs) => {
+  const { TEMPLATE_ID, SERVICE_ID } = configEmailJs;
+  try {
+    const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form); // Uso librería
+    showModalsMessageAlert(7);
+    btnSubmit.textContent = "Enviar";
+  } catch (error) {
+    console.log("FAILED...", error);
+    showModalsMessageAlert(8);
+  }
+};
+
 const validatePhone = (input) => {
   const phone = input.value;
   const isChar = [...phone].some(
@@ -22,34 +65,9 @@ const validatePhone = (input) => {
   isChar ? showModalsMessageAlert(1) : null;
   if (isValidate) {
     btnSubmit.textContent = "Enviando...";
-    sendEmail();
-  }
-};
-
-const sendEmail = async () => {
-  try {
-    const formData = new FormData(form);
-    const response = await fetch(
-      "https://server-portfolio-arrb.onrender.com/api/send-email",
-      {
-        method: "POST",
-        body: JSON.stringify({ formData }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    const result = await response.json();
-    if (response.ok) {
-      showModalsMessageAlert(7);
-      btnSubmit.textContent = "Enviar";
-    } else {
-      throw new Error(result.message);
-    }
-  } catch (error) {
-    console.log("FAILED...", error);
-    showModalsMessageAlert(8);
+    initServiceEmailJs().then((configEmailJs) => {
+      if (configEmailJs) postEmail(form, configEmailJs);
+    });
   }
 };
 
@@ -69,7 +87,11 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault(); // Evita el envío estándar del formulario
   inputs.forEach((input) => validateNameInput(input));
   // Enviar email y luego vaciar el formulario
-  sendEmail().then(() => {
-    form.reset(); // Vaciamos los campos después de enviar el correo
+  initServiceEmailJs().then((configEmailJs) => {
+    if (configEmailJs) {
+      postEmail(form, configEmailJs).then(() => {
+        form.reset(); // Vaciamos los campos después de enviar el correo
+      });
+    }
   });
 });
