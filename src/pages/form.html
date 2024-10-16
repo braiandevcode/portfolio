@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <title>Contacto</title>
+</head>
+<body>
+  <header class="container-header d-flex jc-space-b g-1x">
+    <div class="logo d-flex ai-center jc-center">
+      <p>BP</p>
+    </div>
+
+    <nav
+      class="container-header__nav container-header__nav--show d-flex jc-center ai-center"
+    >
+      <i class="bi bi-x-square-fill bi-x-square-fill--hide"></i>
+      <ul class="container-menu d-flex f-col g-1x">
+        <li>
+          <i class="bi bi-brightness-low container-menu__icon-theme"></i>
+        </li>
+        <li class="container-menu__item"><a href="../index.html#home">Home</a></li>
+        <li class="container-menu__item"><a href="../index.html#proyects">Proyects</a></li>
+        <li class="container-menu__item"><a href="../index.html#skills">Skills</a></li>
+        <li class="container-menu__item">
+          <a href="#">Contact me</a>
+        </li>
+        <li class="container-menu__item d-flex ai-center">
+          <div class="sub-menu d-flex ai-center">
+            <div class="d-flex ai-center">
+              <a href="#" target="_blank" rel="noopener noreferrer">CV</a>
+              <i class="bi bi-caret-up-fill"></i>
+            </div>
+            <ul class="sub-menu__cv">
+              <li>
+                <a
+                  class="sub-menu__pdf"
+                  id="cv-en"
+                  href="./assets/cv-en.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >en</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sub-menu__pdf"
+                  id="cv-es"
+                  href="./assets/cv-es.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >es</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- <i class="bi bi-moon-stars"></i> -->
+    <!-- <div class="container-header__theme d-flex ai-center">
+          <i class="bi bi-brightness-low"></i>
+      </div> -->
+  </header>
+    <!-- CONTACTO -->
+<!-- SECCION FORMULARIO -->
+<div class="contact d-flex ai-center jc-center" data-section="contact">
+    <div class="contact__container d-flex">
+      <form id="form-contact" class="form d-flex jc-spaceB">
+        <h2>Completa el formulario para acordar una entrevista!.</h2>
+  
+        <input
+          class="form__input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nombre"
+          required
+          focus
+        />
+  
+        <input
+          class="form__input"
+          type="text"
+          name="surname"
+          placeholder="Apellido"
+          required
+        />
+  
+        <input
+          class="form__input"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+  
+        <input
+          class="form__input"
+          type="tel"
+          name="tel"
+          placeholder="Teléfono"
+          required
+        />
+  
+        <textarea
+          class="form__input"
+          name="box"
+          placeholder="Comentario..."
+          required
+        ></textarea>
+  
+        <button
+          class="btnSubmit d-flex ai-center jc-center"
+          id="btnSubmit"
+          type="submit"
+        >
+          Enviar
+        </button>
+      </form>
+      <div class="form__img">
+        <img
+          class="form__img-img"
+          src="../assets/images/contact.jpg"
+          alt="persona sosteniendo celular"
+        />
+      </div>
+    </div>
+    <!------------MODAL------------------->
+    <div class="modal modal--hidden d-flex ai-center jc-center">
+      <div class="modal__body">
+        <div class="modal__info d-flex"></div>
+        <div class="modal__btn-action-container">
+          <button class="modal__btn-action">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container-footer d-flex f-col ai-center g-2x">
+    <div class="d-flex jc-center">
+      <nav class="container-footer__nav d-flex jc-space-a ai-center">
+        <div class="logo d-flex ai-center jc-center">
+          <p>BP</p>
+        </div>
+        <ul class="container-menu--col d-flex f-col g-1x">
+          <!-- <li><i class="bi bi-brightness-low container-menu__icon-theme"></i></li> -->
+          <li class="container-menu__item"><a href="#home">Home</a></li>
+          <li class="container-menu__item">
+            <a href="#proyects">Proyects</a>
+          </li>
+          <li class="container-menu__item"><a href="#skills">Skills</a></li>
+          <li class="container-menu__item">
+            <a href="#contact">Contact me</a>
+          </li>
+          <li class="container-menu__item d-flex ai-center"></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="d-flex jc-center ai-center">
+      <ul class="d-flex f-row jc-center ai-center g-2x">
+        <li>
+          <a href="#"><i class="social__icon bi bi-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="social__icon bi bi-github"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="social__icon bi bi-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="social__icon bi bi-twitter-x"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="copyrigth">
+      <p>
+        &copy; Braian Ezequiel Placios. Todos los derechos reservados 2024
+      </p>
+    </div>
+  </footer>
+  <!------------- REUTILIZO MISMO FORMATO DE MODALES ------------>
+  <!-- TEMPLATE MODAL ALERTS -->
+  <template id="template-modal-alerts">
+    <h3 class="modal__title d-flex ai-center">
+      <i class="modal__icon modal__icon--error d-flex ai-center jc-center bi"></i>
+    </h3>
+    <p class="modal__description"></p>
+  </template>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+  <script src="../js/form.js" type="module"></script>
+</body>
+</html>

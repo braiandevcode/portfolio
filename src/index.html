@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/form.css">
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="container-header d-flex jc-space-b g-1x">
+      <div class="logo d-flex ai-center jc-center">
+        <p>BP</p>
+      </div>
+
+      <nav
+        class="container-header__nav container-header__nav--show d-flex jc-center ai-center"
+      >
+        <i class="bi bi-x-square-fill bi-x-square-fill--hide"></i>
+        <ul class="container-menu d-flex f-col g-1x">
+          <li>
+            <i class="bi bi-brightness-low container-menu__icon-theme"></i>
+          </li>
+          <li class="container-menu__item"><a href="#home">Home</a></li>
+          <li class="container-menu__item"><a href="#proyects">Proyects</a></li>
+          <li class="container-menu__item"><a href="#skills">Skills</a></li>
+          <li class="container-menu__item">
+            <a href="./pages/form.html">Contact me</a>
+          </li>
+          <li class="container-menu__item d-flex ai-center">
+            <div class="sub-menu d-flex ai-center">
+              <div class="d-flex ai-center">
+                <a href="#" target="_blank" rel="noopener noreferrer">CV</a>
+                <i class="bi bi-caret-up-fill"></i>
+              </div>
+              <ul class="sub-menu__cv">
+                <li>
+                  <a
+                    class="sub-menu__pdf"
+                    id="cv-en"
+                    href="./assets/cv-en.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >en</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="sub-menu__pdf"
+                    id="cv-es"
+                    href="./assets/cv-es.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >es</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- <i class="bi bi-moon-stars"></i> -->
+      <!-- <div class="container-header__theme d-flex ai-center">
+            <i class="bi bi-brightness-low"></i>
+        </div> -->
+    </header>
+    <main data-section="home">
+      <div
+        class="animate__animated profile profile--column d-flex ai-center animate__fadeInRight"
+      >
+        <nav class="social d-flex">
+          <ul class="social__menu d-flex f-row">
+            <li>
+              <a href="#"><i class="social__icon bi bi-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="social__icon bi bi-github"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="social__icon bi bi-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="social__icon bi bi-twitter-x"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile__body profile__body--column d-flex ai-center g-2x">
+          <div
+            class="profile__presentation profile__presentation--border profile__presentation--line-height d-flex f-col jc-center"
+          >
+            <h2 class="profile__title-name">Braian Palacios</h2>
+            <p class="profile__description">
+              Hola, soy Braian.Soy un Desarrollador Full Stack con foco en
+              desarrollo backend, nacido en Olavarría, Argentina.
+            </p>
+          </div>
+          <div class="divisor divisor--vertical"></div>
+          <div class="divisor divisor--horizontal"></div>
+          <div class="profile__image d-flex jc-center ai-center">
+            <img
+              class="profile__image-img"
+              src="./assets/images/yo.png"
+              srcset="
+                ./assets/images/yo.png           1x,
+                ./assets/images/image_profil.png 2x
+              "
+              alt="Descripción de la imagen"
+            />
+          </div>
+        </div>
+      </div>
+      <!----------------- SECCIÒN PROYECTOS----------------->
+      <div class="container-proyects" data-section="proyects">
+        <div class="container-proyects__bg">
+          <h2 class="container-proyects__title">Proyectos</h2>
+        </div>
+        <section
+          class="animate__animated section-proyects animate__fadeInTopLeft"
+        ></section>
+      </div>
+      <!----------------- SECCIÒN SKILLS----------------->
+      <div class="container-skills" data-section="skills">
+        <div class="container-skills__bg">
+          <h2 class="container-skills__title">Skills</h2>
+        </div>
+        <div class="slider d-flex ai-center">
+          <section class="section-skills slide d-flex ai-center"></section>
+          <i
+            class="bi bi-arrow-left-circle-fill d-flex jc-center ai-center"
+          ></i>
+          <i
+            class="bi bi-arrow-right-circle-fill d-flex jc-center ai-center"
+          ></i>
+        </div>
+      </div>
+    </main>
+    <template id="template-proyects">
+      <article class="article-proyect">
+        <h3 class="article-proyect__title"></h3>
+        <div class="article-proyect__info">
+          <img class="article-proyect__image" />
+          <div class="article-proyect__desription">
+            <p></p>
+          </div>
+        </div>
+      </article>
+    </template>
+    <template id="template-skills">
+      <article class="article-skill">
+        <div class="article-skill__info">
+          <img class="article-skill__image" />
+        </div>
+        <h3 class="article-skill__title"></h3>
+      </article>
+    </template>
+    <footer class="container-footer d-flex f-col ai-center g-2x">
+      <div class="d-flex jc-center">
+        <nav class="container-footer__nav d-flex jc-space-a ai-center">
+          <div class="logo d-flex ai-center jc-center">
+            <p>BP</p>
+          </div>
+          <ul class="container-menu--col d-flex f-col g-1x">
+            <!-- <li><i class="bi bi-brightness-low container-menu__icon-theme"></i></li> -->
+            <li class="container-menu__item"><a href="#home">Home</a></li>
+            <li class="container-menu__item">
+              <a href="#proyects">Proyects</a>
+            </li>
+            <li class="container-menu__item"><a href="#skills">Skills</a></li>
+            <li class="container-menu__item">
+              <a href="./pages/form.html">Contact me</a>
+            </li>
+            <li class="container-menu__item d-flex ai-center"></li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="d-flex jc-center ai-center">
+        <ul class="d-flex f-row jc-center ai-center g-2x">
+          <li>
+            <a href="#"><i class="social__icon bi bi-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="social__icon bi bi-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="social__icon bi bi-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="social__icon bi bi-twitter-x"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyrigth">
+        <p>
+          &copy; Braian Ezequiel Placios. Todos los derechos reservados 2024
+        </p>
+      </div>
+    </footer>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

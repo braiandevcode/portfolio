@@ -1,0 +1,42 @@
+[
+    {
+        "title":"html",
+        "logo":"html.svg"
+    },
+    {
+        "title":"css",
+        "logo":"css.svg"
+    },
+    {
+        "title":"Javascript",
+        "logo":"js.svg"
+    },
+    {
+        "title":"typescript",
+        "logo":"ts.svg"
+    },
+    {
+        "title":"node",
+        "logo":"node.svg"
+    },
+    {
+        "title":"express",
+        "logo":"express.svg"
+    },
+    {
+        "title":"git",
+        "logo":"git.svg"
+    },
+    {
+        "title":"postgres SQL",
+        "logo":"pg.svg"
+    },
+    {
+        "title":"bootstrap",
+        "logo":"bootstrap.svg"
+    },
+    {
+        "title":"tailwind",
+        "logo":"tailwind.svg"
+    }
+]
