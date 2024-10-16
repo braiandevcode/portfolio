@@ -9,7 +9,7 @@ export const renderSectionProyects = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "https://braiandevcode.github.io/portfolio/assets/json/proyects_es.json",
+    "https://braiandevcode.github.io/portfolio/src/assets/json/proyects_es.json",
     null
   );
 
@@ -46,7 +46,7 @@ export const renderSectionSkills = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "https://braiandevcode.github.io/portfolio/assets/json/skills.json",
+    "https://braiandevcode.github.io/portfolio/src/assets/json/skills.json",
     null
   );
 
