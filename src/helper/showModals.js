@@ -109,8 +109,8 @@ export const showModalsMessageAlert = (indexMessage) => {
       e.target.matches(`.${up}`) || e.target.matches(`.${down}`);
 
     // LOCALIZAMOS ICONOS PARA DESPLEGAR.
-    const iconUp = d.querySelector(`.${up}`),
-      iconDown = d.querySelector(`.${down}`);
+    const iconUp = document.querySelector(`.${up}`),
+      iconDown = document.querySelector(`.${down}`);
 
     if (e.target.matches("#cv-en")) dowloadCv(e); // ->SI CONTIENE EL ID CORRESPONDIENTE cv-en
 
