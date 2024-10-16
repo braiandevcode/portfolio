@@ -1,3 +1,4 @@
+import dowloadCv from "../js/dowloadCv.js";
 import updateClassName from "./updateClassName.js";
 // ARREGLO DE MENSAJES PARA MODAL
 const contentInfoModal = [
