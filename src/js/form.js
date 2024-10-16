@@ -13,7 +13,9 @@ const simbols = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 // FUNCIÓN PARA OBTENER CONFIGURACIÓN DE EMAILJS
 const getConfigEmailJs = async () => {
   try {
-    const query = await fetch("http://localhost:3000/api/config");
+    const query = await fetch(
+      "https://server-portfolio-arrb.onrender.com/api/config"
+    );
     if (!query.ok) {
       throw new Error(`Error ${query.status}: ${query.statusText}`);
     }
