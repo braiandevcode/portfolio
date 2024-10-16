@@ -15,7 +15,6 @@ const iconOpen = d.querySelector(".container-header__theme i");
 
 // FUNCION PAARA GENERAR RUTA AMIGABLE
 function smoothScrollToSection(e) {
-  e.preventDefault();
   const targetId = e.target.getAttribute("href")?.substring(1);
   const targetElement = d.querySelector(`[data-section="${targetId}"]`);
 
