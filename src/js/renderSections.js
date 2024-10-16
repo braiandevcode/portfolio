@@ -1,4 +1,3 @@
-import { CREATE_ELEMENT } from "../helper/createElementDom.js";
 import updateClassName from "../helper/updateClassName.js";
 import queryAjax from "./ajax.js";
 
@@ -10,7 +9,7 @@ export const renderSectionProyects = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "http://127.0.0.1:51427/assets/json/proyects_es.json",
+    "https://braiandevcode.github.io/portfolio/assets/json/proyects_es.json",
     null
   );
 
@@ -47,7 +46,7 @@ export const renderSectionSkills = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "http://127.0.0.1:51427/assets/json/skills.json",
+    "https://braiandevcode.github.io/portfolio/assets/json/skills.json",
     null
   );
 
