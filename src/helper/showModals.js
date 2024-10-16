@@ -1,4 +1,3 @@
-import dowloadCv from "../js/dowloadCv.js";
 import updateClassName from "./updateClassName.js";
 // ARREGLO DE MENSAJES PARA MODAL
 const contentInfoModal = [
@@ -86,11 +85,6 @@ const configureModal = (info) => {
 
 // FUNCION PARA MODAL DE MENSAJES
 export const showModalsMessageAlert = (indexMessage) => {
-  // ---LOCALIZACION DE ELEMENTOS DEL DOCUMENTO HTML----//
-  const subMenuCv = document.querySelector(".sub-menu__cv");
-  const navigation = document.querySelector(".container-header__nav");
-  const iconClosed = document.querySelector(".bi-x-square-fill");
-  const iconOpen = document.querySelector(".container-header__theme i");
   const infoModal = contentInfoModal[indexMessage];
   configureModal(infoModal);
   updateClassName("remove", modalContainer, null, "modal--hidden");
@@ -100,56 +94,6 @@ export const showModalsMessageAlert = (indexMessage) => {
     if (e.target.matches(".modal__btn-action")) {
       e.preventDefault();
       updateClassName("add", modalContainer, null, "modal--hidden");
-    }
-
-    const up = "bi-caret-up-fill",
-      down = "bi-caret-down-fill";
-
-    let isCv = e.target.textContent === "CV";
-    let isCarteIcon =
-      e.target.matches(`.${up}`) || e.target.matches(`.${down}`);
-
-    // LOCALIZAMOS ICONOS PARA DESPLEGAR.
-    const iconUp = document.querySelector(`.${up}`),
-      iconDown = document.querySelector(`.${down}`);
-
-    if (e.target.matches("#cv-en")) dowloadCv(e); // ->SI CONTIENE EL ID CORRESPONDIENTE cv-en
-
-    if (e.target.matches("#cv-es")) dowloadCv(e); // ->SI CONTIENE EL ID CORRESPONDIENTE cv-es
-
-    // --> SI CV ES TRUE Y SI ES LA CLASE CORRESPONDIENTE DE ICONOS A EVALUAR
-    if (isCv || isCarteIcon) {
-      e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
-      updateClassName("toggle", subMenuCv, null, "sub-menu__cv--show"); //FUNCION PARA ACCIONES DE CLASSLIST.
-
-      // SI ES EL ICONO HACIA ARRIBA
-      if (iconUp) updateClassName("replace", iconUp, down, up);
-
-      // SI ES EL ICONO HACIA ABAJO
-      if (iconDown) updateClassName("replace", iconDown, up, down);
-    }
-
-    // SI CONTIENEN CLASE .bi-list
-    if (e.target.matches(".bi-list")) {
-      updateClassName(
-        "toggle",
-        navigation,
-        null,
-        "container-header__nav--show"
-      );
-      updateClassName("toggle", iconClosed, null, "bi-x-square-fill--hide");
-      updateClassName("toggle", e.target, null, "bi-list--hide");
-    }
-    // SI CONTIENEN CLASE .bi-x-square-fill
-    if (e.target.matches(".bi-x-square-fill")) {
-      updateClassName(
-        "toggle",
-        navigation,
-        null,
-        "container-header__nav--show"
-      );
-      updateClassName("toggle", iconOpen, null, "bi-list--hide");
-      updateClassName("toggle", iconClosed, null, "bi-x-square-fill--hide");
     }
     // smoothScrollToSection(e);
   });
