@@ -24,7 +24,7 @@ export const renderSectionProyects = async () => {
     _$CLONE.querySelector(".article-proyect__title").textContent = data.title;
     _$CLONE
       .querySelector(".article-proyect__image")
-      .setAttribute("src", `./assets/images/${data.image}`);
+      .setAttribute("src", `./src/assets/images/${data.image}`);
     _$CLONE
       .querySelector(".article-proyect__image")
       .setAttribute("alt", data.title);
@@ -70,7 +70,7 @@ export const renderSectionSkills = async () => {
     _$CLONE.querySelector(".article-skill__title").textContent = data.title;
     _$CLONE
       .querySelector(".article-skill__image")
-      .setAttribute("src", `./assets/images/${data.logo}`);
+      .setAttribute("src", `./src/assets/images/${data.logo}`);
     _$CLONE
       .querySelector(".article-skill__image")
       .setAttribute("alt", data.title);
