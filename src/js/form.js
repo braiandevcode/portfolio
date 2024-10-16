@@ -1,4 +1,5 @@
 import { showModalsMessageAlert } from "../helper/showModals.js";
+import queryAjax from "./ajax.js";
 
 // LOCALIZAOS ELEMENTOS DE HTML
 const inputs = document.querySelectorAll(".form__input");
@@ -10,26 +11,12 @@ const minCharacter = "abcdefghijklmnñopqrstuvwxyz";
 const mayusCharacter = minCharacter.toUpperCase();
 const simbols = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
-// FUNCIÓN PARA OBTENER CONFIGURACIÓN DE EMAILJS
-const getConfigEmailJs = async () => {
-  try {
-    const query = await fetch(
-      "https://server-portfolio-arrb.onrender.com/api/config"
-    );
-    if (!query.ok) {
-      throw new Error(`Error ${query.status}: ${query.statusText}`);
-    }
-    const result = await query.json();
-    return result;
-  } catch (err) {
-    console.log(err.message);
-    return null;
-  }
-};
-
 // FUNCIÓN PARA INICIALIZAR EMAILJS
 const initServiceEmailJs = async () => {
-  const configEmailJs = await getConfigEmailJs();
+  const configEmailJs = await queryAjax(
+    "https://server-portfolio-arrb.onrender.com/api/config",
+    null
+  );
   if (configEmailJs) {
     const { USER_ID } = configEmailJs;
     emailjs.init(USER_ID); // User ID de EmailJS
