@@ -10,7 +10,7 @@ export const renderSectionProyects = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "http://127.0.0.1:58387/assets/json/proyects_es.json",
+    "http://127.0.0.1:51427/assets/json/proyects_es.json",
     null
   );
 
@@ -47,7 +47,7 @@ export const renderSectionSkills = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "http://127.0.0.1:58387/assets/json/skills.json",
+    "http://127.0.0.1:51427/assets/json/skills.json",
     null
   );
 
