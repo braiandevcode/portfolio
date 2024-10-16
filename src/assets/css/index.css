@@ -141,7 +141,7 @@ p{
 .profile--column{
     margin-bottom: 3rem;
 }
-.container-header,
+/* .container-header, */
 .container-footer{
     width: 90%;
     margin: 0 auto;
