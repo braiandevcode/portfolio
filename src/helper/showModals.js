@@ -85,6 +85,11 @@ const configureModal = (info) => {
 
 // FUNCION PARA MODAL DE MENSAJES
 export const showModalsMessageAlert = (indexMessage) => {
+  // ---LOCALIZACION DE ELEMENTOS DEL DOCUMENTO HTML----//
+  const subMenuCv = d.querySelector(".sub-menu__cv");
+  const navigation = d.querySelector(".container-header__nav");
+  const iconClosed = d.querySelector(".bi-x-square-fill");
+  const iconOpen = d.querySelector(".container-header__theme i");
   const infoModal = contentInfoModal[indexMessage];
   configureModal(infoModal);
   updateClassName("remove", modalContainer, null, "modal--hidden");
