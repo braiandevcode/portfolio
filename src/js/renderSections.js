@@ -30,6 +30,14 @@ export const renderSectionProyects = async () => {
 
     updateClassName(
       "add",
+      _$CLONE.querySelector(".article-proyect__desription"),
+      null,
+      "d-flex",
+      "ai-center"
+    );
+
+    updateClassName(
+      "add",
       _$CLONE.querySelector(".article-proyect__info"),
       null,
       "d-flex",

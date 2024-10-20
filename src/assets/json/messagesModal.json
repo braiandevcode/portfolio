@@ -46,7 +46,7 @@
     {
       "title": "Email Invalido",
       "description":
-        "Por favor asegurse de que los datos en el campo email sean de un email valido.",
+        "Datos de campo email invalido. por favor ingrese un enombre de email valido",
       "icon": "bi-check-circle-fill"
     },
     {

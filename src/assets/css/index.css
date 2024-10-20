@@ -370,9 +370,11 @@ p {
     color: #FFF;
 }
 .article-proyect__title{
+    padding: 1rem;
     text-align: center;
     font-size: 1rem;
-    text-decoration: underline;
+    background: -webkit-linear-gradient(right, #d1501c, #c7280cdd);
+    width: 100%;
     text-transform: uppercase;
 }
 
@@ -383,9 +385,13 @@ p {
 }
 
 .article-proyect__desription{
+    padding: .5rem;
     line-height: 30px;
     font-weight:normal;
     text-align: center;
+    height: 150px;
+    background: #252424d0;
+    border-radius: 5px;
 }
 
 /* SECCIÓN SKILLS */
@@ -451,7 +457,7 @@ p {
 /*--------------------------------->FOOTER <-----------------------*/
 .container-footer {
     width: 100%;
-    padding-top: 1rem;
+    padding: 1rem;
     color: #FFF;
     background: #000000da;
 }
@@ -502,7 +508,6 @@ p {
 /**********************************A PARTIR DE 768PX********************************/
 
 @media screen and (min-width:768px) {
-
     .profile--column,
     .profile__body--column {
         flex-direction: row;
