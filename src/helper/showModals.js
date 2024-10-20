@@ -1,8 +1,9 @@
 import queryAjax from "../js/ajax.js";
 import updateClassName from "./updateClassName.js";
+let url = "https://braiandevcode.github.io/portfolio";
 // ARREGLO DE MENSAJES PARA MODAL
 const contentInfoModal = await queryAjax(
-  "http://127.0.0.1:3000/src/assets/json/messagesModal.json",
+  `${url}/src/assets/json/messagesModal.json`,
   null
 );
 
