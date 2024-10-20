@@ -6,7 +6,7 @@ import {
   renderSectionProyects,
   renderSectionSkills,
 } from "./js/renderSections.js";
-import { validateMedia520, validateMedia767 } from "./js/validateMedia.js";
+import { validateMedia568, validateMedia767 } from "./js/validateMedia.js";
 
 const _pClassName = "profile__presentation";
 const profilePresentation = document.querySelector(`.${_pClassName}`);
@@ -23,8 +23,10 @@ const app = () => {
   eventClick();
   renderSectionProyects();
   renderSectionSkills();
-  // Mediaquery > 520px
-  mediaQuerysMin(520, validateMedia520);
+  // Mediaquery > 568px
+  mediaQuerysMin(568, validateMedia568);
+  // Mediaquery > 767px
+
   mediaQuerysMin(767, validateMedia767);
 };
 

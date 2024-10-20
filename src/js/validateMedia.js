@@ -2,7 +2,7 @@ import updateClassName from "../helper/updateClassName.js";
 
 // LOCALIZAMOS ELEMENTOS DEL DOCUMENTO.
 const navigation = document.querySelector(".container-header__nav");
-const iconListOrTheme = document.querySelector(".container-header__theme i");
+const iconListOrTheme = document.querySelector(".container-header__list");
 const socialMenu = document.querySelector(".social__menu");
 const slideShow = document.querySelector(".slide");
 const rootHtml = document.documentElement;
@@ -81,27 +81,38 @@ export const handlePrev = () => {
       "slide--translate",
       "slide--transition"
     );
-    // updateClassName(slideShow, "slide--transition");
 
     handleSlideTransition(() => slideShow.insertBefore(lastChild, firstChild));
   }
 };
 
 // FUNCION PARA VALIDAR LA MEDIAQUERYS.
-export const validateMedia520 = (media) => {
+export const validateMedia568 = (media) => {
   const hide = "container-header__nav--hide";
   const show = "container-header__nav--show";
   if (media) {
     updateClassName("replace", navigation, show, hide);
-    updateClassName("replace", iconListOrTheme, "bi-brightness-low", "bi-list");
+    updateClassName(
+      "add",
+      iconListOrTheme,
+      null,
+      "container-header__list--hide"
+    );
     return;
   }
   updateClassName("replace", navigation, hide, show);
-  updateClassName("replace", iconListOrTheme, "bi-list", "bi-brightness-low");
+  updateClassName(
+    "remove",
+    iconListOrTheme,
+    null,
+    "container-header__list--hide"
+  );
 };
 
 export const validateMedia767 = (media) => {
-  media
-    ? updateClassName("replace", socialMenu, "f-col", "f-row")
-    : updateClassName("replace", socialMenu, "f-row", "f-col");
+  if (media) {
+    updateClassName("replace", socialMenu, "f-col", "f-row");
+  } else {
+    updateClassName("replace", socialMenu, "f-row", "f-col");
+  }
 };

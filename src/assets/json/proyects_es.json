@@ -1,17 +1,17 @@
 [
     {
         "title":"Generador de contraseña",
-        "description":"Un generador de contraseñas segura, donde podrás eleguir el rango de longitud, generar y copiar la contraseña. proyecto con HTML, CSS Y JAVASCRIPT",
+        "description":"Un generador de contraseñas segura, donde podrás eleguir el rango de longitud, generar y copiar la contraseña.",
         "image":"generate-pass.png"
     },
     {
-        "title":"Generador de contraseña",
-        "description":"Un generador de contraseñas segura, donde podrás eleguir el rango de longitud, generar y copiar la contraseña. proyecto con HTML, CSS Y JAVASCRIPT",
-        "image":"generate-pass.png"
+        "title":"Simulación de Supermercado",
+        "description":"Proyecto de ejercicio práctico de carrera FullStack en Talento CEPIT. Es una página web simulada para un supermercado.",
+        "image":"home.jpg"
     },
     {
-        "title":"Generador de contraseña",
-        "description":"Un generador de contraseñas segura, donde podrás eleguir el rango de longitud, generar y copiar la contraseña. proyecto con HTML, CSS Y JAVASCRIPT",
-        "image":"generate-pass.png"
+        "title":"Login",
+        "description":"Proyecto practico backend y frontend de registro y logeo de usuario utilizando Node.js.",
+        "image":"login.png"
     }
 ]

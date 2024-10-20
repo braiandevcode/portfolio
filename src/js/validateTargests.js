@@ -10,8 +10,7 @@ const d = document;
 const subMenuCv = d.querySelector(".sub-menu__cv");
 const navigation = d.querySelector(".container-header__nav");
 const iconClosed = d.querySelector(".bi-x-square-fill");
-const iconOpen = d.querySelector(".container-header__theme i");
-// const modalContainer = document.querySelector(".modal");
+const iconOpen = d.querySelector(".container-header__list i");
 
 // FUNCION PAARA GENERAR RUTA AMIGABLE
 function smoothScrollToSection(e) {

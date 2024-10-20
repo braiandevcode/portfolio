@@ -8,6 +8,15 @@
     <title>Contacto</title>
 </head>
 <body>
+
+  
+
+
+
+
+
+
+
   <header class="container-header d-flex jc-space-b g-1x">
     <div class="logo d-flex ai-center jc-center">
       <p>BP</p>
@@ -18,75 +27,101 @@
     >
       <i class="bi bi-x-square-fill bi-x-square-fill--hide"></i>
       <ul class="container-menu d-flex f-col g-1x">
-        <li>
+        <!-- <li>
           <i class="bi bi-brightness-low container-menu__icon-theme"></i>
-        </li>
-        <li class="container-menu__item"><a href="../../index.html#home">Inicio</a></li>
-        <li class="container-menu__item"><a href="../../index.html#proyects">Proyectos</a></li>
-        <li class="container-menu__item"><a href="../../index.html#skills">Habilidades</a></li>
-        <li class="container-menu__item"><a href="#">Contacto</a></li>
+        </li> -->
+        <li class="container-menu__item"><a href="../../index.html#home" class="d-flex ai-center g-0-5x"><i class="bi bi-house"></i>Inicio</a></li>
+        <li class="container-menu__item"><a href="../../index.html#proyects" class="d-flex ai-center g-0-5x"><i class="bi bi-briefcase"></i>Proyectos</a></li>
+        <li class="container-menu__item"><a href="../../index.html#skills" class="d-flex ai-center g-0-5x"><i class="bi bi-gear"></i>Habilidades</a></li>
+        <li class="container-menu__item"><a href="#" class="d-flex ai-center g-0-5x"><i class="bi bi-envelope"></i>Contacto</a></li>
       </ul>
     </nav>
+    <div class="container-header__list d-flex ai-center">
+      <i class="bi bi-list"></i>
+    </div>
     <!-- <i class="bi bi-moon-stars"></i> -->
     <!-- <div class="container-header__theme d-flex ai-center">
           <i class="bi bi-brightness-low"></i>
       </div> -->
   </header>
     <!-- CONTACTO -->
-<!-- SECCION FORMULARIO -->
-<div class="contact d-flex ai-center jc-center" data-section="contact">
+  <!-- SECCION FORMULARIO -->
+  <div class="contact d-flex ai-center jc-center" data-section="contact">
     <div class="contact__container d-flex">
-      <form id="form-contact" class="form d-flex jc-spaceB">
-        <h2>Completa el formulario para acordar una entrevista!.</h2>
-  
-        <input
-          class="form__input"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nombre"
-          required
-          focus
-        />
-  
-        <input
-          class="form__input"
-          type="text"
-          name="surname"
-          placeholder="Apellido"
-          required
-        />
-  
-        <input
-          class="form__input"
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-  
-        <input
-          class="form__input"
-          type="tel"
-          name="tel"
-          placeholder="Teléfono"
-          required
-        />
-  
-        <textarea
-          class="form__input"
-          name="box"
-          placeholder="Comentario..."
-          required
-        ></textarea>
-  
-        <button
-          class="btnSubmit d-flex ai-center jc-center"
-          id="btnSubmit"
-          type="submit"
-        >
-          Enviar
-        </button>
+      <form id="form-contact" class="form container d-flex jc-spaceB">
+        <div class="text"> Completa el formulario para acordar una entrevista!.</div>
+        <div class="form-row">
+          <div class="input-data">
+            <input 
+              type="text" 
+              name="name"
+              focus 
+              required
+            />
+            <div class="underline"></div>
+            <label class="d-flex jc-center ai-center">Nombre
+              <p>*</p>
+            </label>
+          </div>
+          <div class="input-data">
+            <input
+              class="input"
+              type="text"
+              name="surname"
+              required
+            />
+            <div class="underline"></div>
+            <label class="d-flex jc-center ai-center">Apellido
+              <p>*</p>
+            </label>
+          </div>
+          <div class="input-data">
+            <input
+              class="input"
+              type="text"
+              name="email"
+              required
+             />
+            <div class="underline"></div>
+            <label class="d-flex jc-center ai-center">Correo Electronico
+              <p>*</p>
+            </label>
+          </div>
+          <div class="input-data">
+            <input 
+              class="input"
+              type="text"
+              name="company"
+              required
+            />
+            <div class="underline"></div>
+            <label class="d-flex jc-center ai-center">Nombre Empresa
+              <p>*</p>
+            </label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data textarea">
+            <textarea 
+              class="input"
+              name="box"
+              required
+            ></textarea>
+            <div class="underline"></div>
+            <label>Escribir mensaje</label>
+          </div>  
+          <div class="form-row submit-btn">
+            <div class="input-data">
+              <div class="inner"></div>
+              <input
+                type="submit"
+                value="Enviar"
+                class="btnSubmit d-flex ai-center jc-center"
+                id="btnSubmit"
+              >
+            </div>
+          </div>
+        </div>
       </form>
       <div class="form__img">
         <img
@@ -114,17 +149,17 @@
         </div>
         <ul class="container-menu--col d-flex f-col g-1x">
           <!-- <li><i class="bi bi-brightness-low container-menu__icon-theme"></i></li> -->
-          <li class="container-menu__item"><a href="../../index.html#home">Inicio</a></li>
-          <li class="container-menu__item"><a href="../../index.html#proyects">Proyectos</a></li>
-          <li class="container-menu__item"><a href="../../index.html#skills">Habilidades</a></li>
+          <li class="container-menu__item"><a href="../../index.html#home" class="d-flex ai-center g-0-5x"> <i class="bi bi-house"></i>Inicio</a></li>
+          <li class="container-menu__item"><a href="../../index.html#proyects" class="d-flex ai-center g-0-5x"><i class="bi bi-briefcase"></i>Proyectos</a></li>
+          <li class="container-menu__item"><a href="../../index.html#skills" class="d-flex ai-center g-0-5x"><i class="bi bi-gear"></i>Habilidades</a></li>
           <li class="container-menu__item">
-            <a href="#">Contacto</a>
+            <a href="#" class="d-flex ai-center g-0-5x"><i class="bi bi-envelope"></i>Contacto</a>
           </li>
         </ul>
       </nav>
     </div>
     <nav class="d-flex jc-center ai-center">
-      <ul class="d-flex f-row jc-center ai-center g-2x">
+      <ul class="social__menu--footer d-flex f-row jc-center ai-center g-2x">
         <li>
           <a href="www.linkedin.com/in/braianpalacios"><i class="social__icon bi bi-linkedin"></i></a>
         </li>

@@ -1,6 +1,6 @@
 import updateClassName from "../helper/updateClassName.js";
 import queryAjax from "./ajax.js";
-
+let url = "https://braiandevcode.github.io/portfolio";
 // FUNCION PARA RENDERIZAR TARJETAS DE PROYECTOS
 export const renderSectionProyects = async () => {
   const $TEMPLATE_PROYECT = document.getElementById("template-proyects");
@@ -9,7 +9,7 @@ export const renderSectionProyects = async () => {
 
   // INVOCAR FUNCION PARA HACER LA PETICION
   const result = await queryAjax(
-    "https://braiandevcode.github.io/portfolio/src/assets/json/proyects_es.json",
+    `${url}/src/assets/json/proyects_es.json`,
     null
   );
 
@@ -18,8 +18,24 @@ export const renderSectionProyects = async () => {
     const _$CLONE = document.importNode($TEMPLATE_PROYECT.content, true);
 
     // ACTUALIZAMOS EL CLON
-    updateClassName("add", _$CLONE.querySelector(".article-proyect"), "d-flex");
-    updateClassName("add", _$CLONE.querySelector(".article-proyect"), "f-col");
+    updateClassName(
+      "add",
+      _$CLONE.querySelector(".article-proyect"),
+      null,
+      "d-flex",
+      "f-col",
+      "ai-center",
+      "g-1x"
+    );
+
+    updateClassName(
+      "add",
+      _$CLONE.querySelector(".article-proyect__info"),
+      null,
+      "d-flex",
+      "ai-center",
+      "f-col"
+    );
 
     _$CLONE.querySelector(".article-proyect__title").textContent = data.title;
     _$CLONE
@@ -45,10 +61,7 @@ export const renderSectionSkills = async () => {
   const $FRAGMENT = document.createDocumentFragment();
 
   // INVOCAR FUNCION PARA HACER LA PETICION
-  const result = await queryAjax(
-    "https://braiandevcode.github.io/portfolio/src/assets/json/skills.json",
-    null
-  );
+  const result = await queryAjax(`${url}/src/assets/json/skills.json`, null);
 
   result.forEach((data) => {
     //CLONAR CONTENIDO DE PLANTILLA
