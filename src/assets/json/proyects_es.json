@@ -13,5 +13,20 @@
         "title":"Login",
         "description":"Proyecto practico backend y frontend de registro y logeo de usuario utilizando Node.js.",
         "image":"login.png"
+    },
+    {
+        "title":"Gestor de tareas",
+        "description":"Proyecto práctico de una simulación de gestor de tareas con HTML, CSS y javascript.",
+        "image":"gestor-tareas.png"
+    },
+    {
+        "title":"Mostrar/Ocultar",
+        "description":"Proyecto práctico de evento de mostrar y ocultar contenedor. Se utilizó HTML, CSS y javascript.",
+        "image":"mostrar-ocultar.png"
+    },
+    {
+        "title":"api REST",
+        "description":"Práctica de peticiones AJAX con fetch, simulando la base de datos con libreria json-server",
+        "image":"api-rest.png"
     }
 ]
