@@ -91,7 +91,10 @@ export const validateMedia568 = (media) => {
   const hide = "container-header__nav--hide";
   const show = "container-header__nav--show";
   if (media) {
-    updateClassName("replace", navigation, show, hide);
+    setTimeout(() => {
+      updateClassName("replace", navigation, show, hide);
+    }, 1500);
+
     updateClassName(
       "add",
       iconListOrTheme,

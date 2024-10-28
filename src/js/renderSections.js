@@ -25,6 +25,7 @@ export const renderSectionProyects = async () => {
       "d-flex",
       "f-col",
       "ai-center",
+      "jc-center",
       "g-1x"
     );
 
@@ -42,10 +43,22 @@ export const renderSectionProyects = async () => {
       null,
       "d-flex",
       "ai-center",
+      "jc-center",
+      "g-1x",
       "f-col"
     );
 
     _$CLONE.querySelector(".article-proyect__title").textContent = data.title;
+
+    updateClassName(
+      "add",
+      _$CLONE.querySelector(".article-proyect__title"),
+      null,
+      "d-flex",
+      "ai-center",
+      "jc-center"
+    );
+
     _$CLONE
       .querySelector(".article-proyect__image")
       .setAttribute("src", `./src/assets/images/${data.image}`);
