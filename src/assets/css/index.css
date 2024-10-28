@@ -192,7 +192,7 @@ p {
     color: #FFF;
 }
 /****NAV DESPLEGADO*****/
-.container-header__nav--show {
+.container-header__nav--show{
     transform: translateX(0);
 }
 
