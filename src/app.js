@@ -30,11 +30,11 @@ const app = () => {
   mediaQuerysMin(767, validateMedia767);
 };
 
-window.addEventListener("resize", () => {
-  // Mediaquery > 568px
-  mediaQuerysMin(568, validateMedia568);
-  // Mediaquery > 767px
-  mediaQuerysMin(767, validateMedia767);
-});
+// window.addEventListener("resize", () => {
+//   // Mediaquery > 568px
+//   mediaQuerysMin(568, validateMedia568);
+//   // Mediaquery > 767px
+//   mediaQuerysMin(767, validateMedia767);
+// });
 
 export default app;
