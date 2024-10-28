@@ -35,7 +35,6 @@ window.addEventListener("resize", () => {
   mediaQuerysMin(568, validateMedia568);
   // Mediaquery > 767px
   mediaQuerysMin(767, validateMedia767);
-  location.reload();
 });
 
 export default app;
