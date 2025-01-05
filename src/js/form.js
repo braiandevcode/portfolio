@@ -1,5 +1,6 @@
 import { mediaQuerysMin } from "../helper/mediaQuerys.js";
 import { showModalsMessageAlert } from "../helper/showModals.js";
+import updateClassName from "../helper/updateClassName.js";
 import queryAjax from "./ajax.js";
 import { eventClick } from "./events.js";
 import { validateMedia568, validateMedia767 } from "./validateMedia.js";
@@ -7,7 +8,7 @@ import { validateMedia568, validateMedia767 } from "./validateMedia.js";
 // LOCALIZAMOS ELEMENTOS DE HTML
 const $inputs = document.querySelectorAll(".input-data .input");
 const $form = document.getElementById("form-contact");
-const $btnSubmit = document.getElementById("btnSubmit");
+const LOADER = document.querySelector(".container-loadding");
 
 // Carácteres para validar email
 const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -32,7 +33,6 @@ const postEmail = async (form, configEmailJs) => {
   try {
     await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form); // Uso librería
     showModalsMessageAlert(7);
-    $btnSubmit.value = "Enviar";
   } catch (error) {
     console.log("FAILED...", error);
     showModalsMessageAlert(10);
@@ -69,28 +69,33 @@ const allFieldsFilled = () => {
 };
 
 // EVENTO SUBMIT
-$form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // Evita el envío estándar del formulario
-  let valid = true;
-  $inputs.forEach((input) => {
-    valid = validateNameInput(input) && valid;
+function submitForm() {
+  $form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // Evita el envío estándar del formulario
+    // updateClassName("add", LOADER, null, "loadding-show");
+    let valid = true;
+    $inputs.forEach((input) => {
+      valid = validateNameInput(input) && valid;
+    });
+
+    if (!allFieldsFilled()) {
+      showModalsMessageAlert(9);
+    }
+
+    if (valid && allFieldsFilled()) {
+      initServiceEmailJs().then((configEmailJs) => {
+        postEmail($form, configEmailJs).then(() => {
+          $form.reset(); // Vaciamos los campos después de enviar el correo
+        });
+      });
+    }
   });
 
-  if (!allFieldsFilled()) {
-    showModalsMessageAlert(9);
-  }
+  // MEDIAQUERYS FORM-->
+  mediaQuerysMin(520, validateMedia568);
+  mediaQuerysMin(767, validateMedia767);
+  eventClick();
+}
 
-  if (valid && allFieldsFilled()) {
-    initServiceEmailJs().then((configEmailJs) => {
-      $btnSubmit.value = "Enviando...";
-      postEmail($form, configEmailJs).then(() => {
-        $form.reset(); // Vaciamos los campos después de enviar el correo
-      });
-    });
-  }
-});
+export default submitForm;
 
-// MEDIAQUERYS FORM-->
-mediaQuerysMin(520, validateMedia568);
-mediaQuerysMin(767, validateMedia767);
-eventClick();
