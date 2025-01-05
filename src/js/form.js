@@ -11,7 +11,7 @@ const $form = document.getElementById("form-contact");
 const LOADER = document.querySelector(".container-loadding");
 // Carácteres para validar email
 const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-let url = "https://server-portfolio-arrb.onrender.com";
+let url = "http:localhost:3000";
 
 // FUNCIÓN PARA INICIALIZAR EMAILJS
 const initServiceEmailJs = async () => {
