@@ -8,7 +8,7 @@ import { validateMedia568, validateMedia767 } from "./validateMedia.js";
 // LOCALIZAMOS ELEMENTOS DE HTML
 const $inputs = document.querySelectorAll(".input-data .input");
 const $form = document.getElementById("form-contact");
-
+const LOADER = document.querySelector(".container-loadding");
 // Carácteres para validar email
 const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 let url = "https://server-portfolio-arrb.onrender.com";
@@ -30,9 +30,12 @@ const initServiceEmailJs = async () => {
 const postEmail = async (form, configEmailJs) => {
   const { TEMPLATE_ID, SERVICE_ID } = configEmailJs;
   try {
+    updateClassName("add", LOADER, null, "loadding-show");
     await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form); // Uso librería
+    updateClassName("remove", LOADER, null, "loadding-show");
     showModalsMessageAlert(7);
   } catch (error) {
+    updateClassName("remove", LOADER, null, "loadding-show");
     console.log("FAILED...", error);
     showModalsMessageAlert(10);
   }
@@ -68,34 +71,28 @@ const allFieldsFilled = () => {
   return allFilled;
 };
 
-// EVENTO SUBMIT
-function submitForm() {
-  $form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Evita el envío estándar del formulario
-    let valid = true;
-    $inputs.forEach((input) => {
-      valid = validateNameInput(input) && valid;
-    });
-
-    if (!allFieldsFilled()) {
-      updateClassName("remove", LOADER, null, "loadding-show");
-      showModalsMessageAlert(9);
-    }
-
-    if (valid && allFieldsFilled()) {
-      initServiceEmailJs().then((configEmailJs) => {
-        postEmail($form, configEmailJs).then(() => {
-          $form.reset(); // Vaciamos los campos después de enviar el correo
-        });
-      });
-    }
+$form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // Evita el envío estándar del formulario
+  let valid = true;
+  $inputs.forEach((input) => {
+    valid = validateNameInput(input) && valid;
   });
 
-  // MEDIAQUERYS FORM-->
-  mediaQuerysMin(520, validateMedia568);
-  mediaQuerysMin(767, validateMedia767);
-  eventClick();
-}
+  if (!allFieldsFilled()) {
+    updateClassName("remove", LOADER, null, "loadding-show");
+    showModalsMessageAlert(9);
+  }
 
-submitForm();
+  if (valid && allFieldsFilled()) {
+    initServiceEmailJs().then((configEmailJs) => {
+      postEmail($form, configEmailJs).then(() => {
+        $form.reset(); // Vaciamos los campos después de enviar el correo
+      });
+    });
+  }
+});
 
+// MEDIAQUERYS FORM-->
+mediaQuerysMin(520, validateMedia568);
+mediaQuerysMin(767, validateMedia767);
+eventClick();

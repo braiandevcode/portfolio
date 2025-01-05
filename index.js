@@ -17,6 +17,7 @@ images.forEach((img) => {
   if (img.complete) {
     imagesLoaded++;
   }
+
 });
 
 // Verificar si todas las imágenes ya están cargadas
@@ -30,10 +31,8 @@ function checkImagesLoaded() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // if (location.pathname.includes("/index.html")) {
-    if(isImages){
-      updateClassName("remove", LOADER, null, "loadding-show");
-    }
-    app();
-  // }
+  if(isImages){
+    updateClassName("remove", LOADER, null, "loadding-show");
+  }
+  app();
 });
