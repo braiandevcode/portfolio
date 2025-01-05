@@ -8,7 +8,6 @@ import { validateMedia568, validateMedia767 } from "./validateMedia.js";
 // LOCALIZAMOS ELEMENTOS DE HTML
 const $inputs = document.querySelectorAll(".input-data .input");
 const $form = document.getElementById("form-contact");
-const LOADER = document.querySelector(".container-loadding");
 
 // Carácteres para validar email
 const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -47,6 +46,7 @@ const validateNameInput = (input) => {
     if (emailRegExp.test(value)) {
       value = value.toLowerCase();
     } else {
+      updateClassName("remove", LOADER, null, "loadding-show");
       showModalsMessageAlert(8);
       return false;
     }
@@ -72,13 +72,13 @@ const allFieldsFilled = () => {
 function submitForm() {
   $form.addEventListener("submit", async (e) => {
     e.preventDefault(); // Evita el envío estándar del formulario
-    // updateClassName("add", LOADER, null, "loadding-show");
     let valid = true;
     $inputs.forEach((input) => {
       valid = validateNameInput(input) && valid;
     });
 
     if (!allFieldsFilled()) {
+      updateClassName("remove", LOADER, null, "loadding-show");
       showModalsMessageAlert(9);
     }
 
@@ -97,5 +97,5 @@ function submitForm() {
   eventClick();
 }
 
-export default submitForm;
+submitForm();
 

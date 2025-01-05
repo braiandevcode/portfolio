@@ -2,7 +2,6 @@
 import { mediaQuerysMin } from "./helper/mediaQuerys.js";
 import updateClassName from "./helper/updateClassName.js";
 import { eventClick } from "./js/events.js";
-import submitForm from "./js/form.js";
 import {
   renderSectionProyects,
   renderSectionSkills,
@@ -29,10 +28,6 @@ const app = () => {
   mediaQuerysMin(568, validateMedia568);
   // Mediaquery > 767px
   mediaQuerysMin(767, validateMedia767);
-
-  if(location.pathname.includes("/form.html")){
-    submitForm();
-  }
 };
 
 export default app;

@@ -30,10 +30,10 @@ function checkImagesLoaded() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (location.pathname.includes("/index.html")) {
+  // if (location.pathname.includes("/index.html")) {
     if(isImages){
-        updateClassName("remove", LOADER, null, "loadding-show");
+      updateClassName("remove", LOADER, null, "loadding-show");
     }
     app();
-  }
+  // }
 });
