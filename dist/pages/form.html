@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/form.css">
-  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/form.min.css">
+  <link rel="stylesheet" href="../assets/css/index.min.css">
   <title>Contacto</title>
 </head>
 
@@ -70,16 +70,9 @@
         <div class="text"> Completa el formulario para acordar una entrevista!.</div>
         <div class="form-row">
           <div class="input-data">
-            <input type="text" name="name" focus required />
+            <input class="input" type="text" name="nameComplete" focus required />
             <div class="underline"></div>
-            <label class="d-flex jc-center ai-center">Nombre
-              <p>*</p>
-            </label>
-          </div>
-          <div class="input-data">
-            <input class="input" type="text" name="surname" required />
-            <div class="underline"></div>
-            <label class="d-flex jc-center ai-center">Apellido
+            <label class="d-flex jc-center ai-center">Nombre Completo
               <p>*</p>
             </label>
           </div>
@@ -176,8 +169,7 @@
     </h3>
     <p class="modal__description"></p>
   </template>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-  <script src="../../index.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="../form.min.js" type="module"></script>
 </body>
-
 </html>

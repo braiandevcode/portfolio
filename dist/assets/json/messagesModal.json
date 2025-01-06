@@ -60,5 +60,11 @@
       "description":
         "Ocurrio un problema, los datos no se enviaron. Intente de nuevo mas tarde.",
       "icon": "bi-check-circle-fill"
+    },
+    {
+      "title": "Error de tipo",
+      "description":
+        "El campo de Nombre Completo solo debe contener letras  y debe estar entre 3 y 25 caracteres.",
+      "icon": "bi-check-circle-fill"
     }
   ]
