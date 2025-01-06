@@ -1,1 +1,0 @@
-import app from"./src/app.js";import updateClassName from"./src/helper/updateClassName.js";const LOADER=document.querySelector(".container-loadding");updateClassName("remove",LOADER,null,"loadding-show"),document.addEventListener("DOMContentLoaded",(()=>{updateClassName("remove",LOADER,null,"loadding-show"),app()}));
