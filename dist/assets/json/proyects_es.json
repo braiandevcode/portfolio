@@ -28,5 +28,10 @@
         "title":"api REST",
         "description":"Práctica de peticiones AJAX con fetch, simulando la base de datos con libreria json-server",
         "image":"api-rest.png"
+    },
+    {
+        "title":"Grabador de audios",
+        "description":"Practica de grabador de audios, con HTML, Css y Javascript",
+        "image":"grabador-voz.png"
     }
 ]
