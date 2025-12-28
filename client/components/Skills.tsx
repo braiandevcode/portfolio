@@ -23,7 +23,7 @@ const Skills = () => {
                 <div className="p-2 bg-gradient-to-br from-portfolio-accent to-blue-600 rounded-lg text-white">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold">
                   {category.name}
                 </h3>
               </div>
