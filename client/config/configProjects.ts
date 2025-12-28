@@ -39,15 +39,5 @@ export const projects: iProject[] = [
     link: "https://braiandevcode.github.io/TP1-Frontend/",
     github: "https://github.com/braiandevcode/TP1-Frontend",
   },
-  {
-    id: "5",
-    title: "ConectaServ",
-    description:
-    "Full stack team project developed during a Full Stack program, covering planning to MVP. Includes authentication (login/register), role-based access, image uploads, REST API, JWT security, and database integration.",
-    image: "https://res.cloudinary.com/dsdb2dbqs/image/upload/v1766881226/l5rjgy8hipa8jxflcduf.png",
-    tags: ["React", "CSS", "Tailwindcss", "shadcn", "Nodejs", "Nestjs", "Typescript", "Mysql"],
-    link: "https://conecta-serv-ivory.vercel.app/",
-    github: "https://github.com/braiandevcode/ConectaServ",
-  },
 ];
 
