@@ -22,8 +22,6 @@
     "erasableSyntaxOnly": false, //PERMITE CREAR ENUMS en false SINO NO LO PERMITE SOLO LITERALES
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./client/*"]
     }

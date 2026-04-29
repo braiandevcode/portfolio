@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import twAnimate from "tailwindcss-animate";
 export default {
   darkMode: ["class"],
   content: ["./client/**/*.{ts,tsx}"],
@@ -91,5 +91,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [twAnimate],
 } satisfies Config;
