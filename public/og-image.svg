@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect x="60" y="60" width="1080" height="510" rx="30" fill="#1D1515"/>
+  <rect x="61" y="61" width="1078" height="508" rx="29" stroke="white" stroke-width="2" opacity="0.15"/>
+  
+  <!-- Logo circle -->
+  <circle cx="600" cy="240" r="80" fill="#1D1515" stroke="white" stroke-width="4"/>
+  <text x="600" y="268" text-anchor="middle" fill="white" font-family="monospace" font-size="64" font-weight="bold">BP</text>
+  
+  <!-- Name -->
+  <text x="600" y="370" text-anchor="middle" fill="white" font-family="sans-serif" font-size="48" font-weight="bold">Braian Palacios</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="420" text-anchor="middle" fill="#888" font-family="sans-serif" font-size="28">Full Stack Developer</text>
+  
+  <!-- Divider -->
+  <line x1="480" y1="450" x2="720" y2="450" stroke="#555" stroke-width="1"/>
+  
+  <!-- Tech stack -->
+  <text x="600" y="490" text-anchor="middle" fill="#666" font-family="monospace" font-size="20">React · TypeScript · Tailwind CSS</text>
+</svg>

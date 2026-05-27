@@ -1,13 +1,18 @@
 import { useContext } from "react";
 import { IndexContext } from "@/context/IndexContext";
+import { Sun, Moon } from "lucide-react";
 
-// ICONO DE CAMBIO DE TEMA DE FONDO
-const ThemeToggle= () => {
+const ThemeToggle = () => {
   const { toggleTheme, theme } = useContext(IndexContext);
   return (
-    <button type="button" onClick={toggleTheme}>
-      {theme === "dark" ? "🌙" : "☀️"}
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="p-2 rounded-lg hover:bg-accent transition-colors"
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+    >
+      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   );
-}
+};
 export default ThemeToggle;

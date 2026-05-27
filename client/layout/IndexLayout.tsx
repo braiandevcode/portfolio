@@ -3,12 +3,11 @@ import Header from "@/components/Header";
 import IndexProvider from "@/context/IndexProvider";
 import { Outlet } from "react-router-dom";
 
-// INDICE DE LAYOUT
 const IndexLayout = () => {
   return (
     <IndexProvider>
       <Header />
-      <main>
+      <main className="min-h-screen">
         <Outlet />
       </main>
       <Footer />
