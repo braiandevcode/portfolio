@@ -12,14 +12,14 @@ export const projects: iProject[] = [
   },
   {
     id: "2",
-    title: "CarTravels",
+    title: "LiquidChofer",
     description:
       "Shift calculator for car rental and taxi agency drivers. Solves the tedious end-of-day accounting: total billed, gas expenses, percentages (agency, driver, rented car), trips to factories with negotiated prices, and generates a receipt in PDF or to share via WhatsApp. Everything is saved in localStorage, no registration or connection required.",
     image:
-      "https://res.cloudinary.com/dsdb2dbqs/image/upload/v1779905241/qhrvxa4geqfpbd1djehb.png",
+      "https://res.cloudinary.com/dsdb2dbqs/image/upload/v1788409780/fopmq6uimylcomkbwirp.png",
     tags: ["REACT", "TYPESCRIPT", "VITE", "TAILWIND"],
-    link: "https://car-travels-sigma.vercel.app/",
-    github: "https://github.com/braiandevcode/CarTravels",
+    link: "https://liquid-chofer.vercel.app/",
+    github: "https://github.com/braiandevcode/LiquidChofer",
   },
 ];
 
