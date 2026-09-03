@@ -1,5 +1,4 @@
 import type { iProject } from "@/interface/iProjects";
-
 export const projects: iProject[] = [
   {
     id: "1",
